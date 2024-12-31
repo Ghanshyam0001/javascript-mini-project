@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // script is element
+    //      onload is function
+    //     function loadscript (src,callback){
+    //         var script = document.createElement("script");
+    //         script.src = src;
+    //         script.onload =()=>{
+    //          console.log("loadedscript",src)
+    //          callback(null,src);
+    //         }
+    //         script.onerror=()=>{
+    //           console.log("please chack something  wrong",src)
+    //           callback(new Error ("got some error"))
+    //         }
+    //         document.body.appendChild(script);
+    //     }
+    //    function hello(error,src){
+    //     if(error){
+    //         console.log(error)
+    //         return
+    //     }
+    //       alert("hi"+src)
+    //    }
+    //    function goodmorning(src){
+    //        alert("i am ghanshyam"+src)
+    //    }
+    //     loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.mn.js",hello)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function loadscript(src, callback) {
+      var script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        console.log("loadscript", src)
+        callback(null, src);
+      }
+      script.onerror = () => {
+        console.log("somthing went wrong", src)
+        callback(new Error("got some error"));
+
+      }
+
+      document.body.appendChild(script);
+    }
+
+    function g(error, src) {
+      if (error) {
+        console.log(error)
+        return
+      }
+      alert("it's good working" + src)
+    }
+    loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.mn.js", g)
+  </script>
+
+
+</body>
+
+</html>

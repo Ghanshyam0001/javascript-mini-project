@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(67)
+            },1000)
+        })
+        let p2= new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(64)
+                // reject(new Error("some thing gone wrong"))
+            })
+        })
+        let p3 = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(69)
+            })
+        })
+        // let a = Promise.all([p1,p2,p3])  // ek pan promise reject thay to aakhi promise nai chale
+        // a.then((value)=>{
+        //     console.log(value)
+        // })
+        // let b = Promise.allSettled([p1,p2,p3]) // status and reason show
+        // b.then((value)=>{
+        //     console.log(value)
+        // })
+        let c = Promise.race([p1,p2,p3])
+        c.then((value) => {
+            console.log(value)
+        })
+        let d = Promise.any([p1,p2,p3]) // not wait for reject its wait to resolve promise but either not resolve it throw error
+        d.then((value) => {
+            console.log(value)
+        })
+        let e= Promise.resolve(6)
+        e.then((value) => {
+            console.log(value)
+        })
+        let f = Promise.reject(new Error("iuwhcishiuw"))
+        f.then((value) => {
+            console.log(value)
+        })
+
+        // p1.then((value)=>{
+        //     console.log(value)
+        // })
+        // p2.then((value)=>{
+        //     console.log(value)
+        // })
+        // p3.then((value)=>{
+        //     console.log(value)
+        // })
+    </script>
+</body>
+</html>

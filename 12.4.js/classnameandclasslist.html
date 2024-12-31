@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red {
+        background-color: red;
+        color: white;
+    }
+
+    .yellow {
+        background-color: yellow;
+        color: rgb(21, 19, 19)
+    }
+</style>
+
+<body>
+
+    <div id="first" class="yellow text-dark">
+        <span>hey i am good</span>
+    </div>
+    <script>
+        first.className = "text-black red"
+        first.classList  // classlist open
+        first.classList.remove("red") //remove red color
+        first.classList.add("red")  //add red color
+        first.classList.toggle("red")  //color hase to hatai dese nahi hoy to lagai dese
+        first.classList.contains("red")  //red color lagelo che ke nai (true or false)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute method</title>
+</head>
+<body>
+    <div id="first" class="hey">
+         HEY I AM CONTAINER
+    </div>
+    <div id="second" class="hi" data-game="i" data-player="am">i am second</div>
+    <script>
+        let a = first.getAttribute("class")// [what is id first class name]
+        console.log(a)
+         console.log(first.hasAttribute("class"))
+        //  [is this set class to id first it avalible print true]
+    // first.setAttribute("hidden","true") // in first id content hidden
+    first.setAttribute("class","true main") // hey remove and true and main class insert
+    first.removeAttribute("class") // class is remove
+    console.log(first.attributes)  // all attribute in console
+    console.log(second.dataset)
+    console.log(second.dataset.game)
+    console.log(second.dataset.player)
+    // new attribute add in js
+    // use data-(choose attribute name)
+    // attribute like class
+
+    
+
+    </script>
+    
+</body>
+</html>

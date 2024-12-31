@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class  plainform{
+            constructor(yourname,trainnumber){
+                this.name = yourname
+            this.number = trainnumber
+                console.log("your name is"+yourname,"your number is"+trainnumber)
+            }
+         submit(){
+            alert(this.name+"your form is submitted"+this.number)
+         }
+         cancel(){
+            alert(this.name+"sorry but your form is rejected"+this.number)
+            this.number=0
+         
+        }
+    }
+        let ghanshyam= new plainform("ghanshyam",123450)
+       
+        let  rohan = new plainform("rohan",123555)
+        
+        ghanshyam.submit()
+        rohan.cancel()
+
+    </script>
+    
+</body>
+</html>

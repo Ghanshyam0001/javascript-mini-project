@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner html</title>
+</head>
+<body>
+    hello world
+   <span id="last" hidden>hey i am </span>
+    <script>
+        let x = document.getElementsByTagName("span")[0]
+        console.log(x)
+        console.dir(document.getElementsByTagName("span")[0])
+        console.log(document.body.firstChild.nodeName)
+        console.log(document.body.firstElementChild.nodeName)
+        last.innerHTML
+         'hey i am ghanshyam'
+        //  last.innerHTML="<i>hi am ghanshyam</i>" [ we can modify html and vilid for element nodes only]
+        // '<i>hi am ghanshyam</i>'
+
+        // last.outerHTML
+        // '<span id="last">hey i am </span>'[hole id and its tag show]
+        // last.outerHTML="hey i am ghanshyam"
+        //  'hey i am ghansyam'[after write html erase]
+        // document.body.firstChild.data   [all data is show]
+        // document.body.textContent   [all html text content]
+        // write hidden in id side so content not shows
+        // last.hidden=false[hidden element show]
+           </script>
+    
+</body>
+</html>

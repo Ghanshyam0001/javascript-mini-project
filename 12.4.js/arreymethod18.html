@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>                  
+    <script>
+    // delete is not a arrey method it's operator like a typeof
+    // we are delete one element in arrey but length is after and before same when we print a num so deleteed element show print empty
+
+    let nam = [1,2,3,4,5,6,7,8,9,10]
+    console.log(nam.length)
+    delete nam[3]
+    console.log(nam.length)
+
+    // concat is use to two arrey are connect in one arrey
+    let nam2 = [11,12,13,14,15,16,17,18,19,20]
+    let nam4 = [111,112,113,114,115,116,117,118,119,120]
+    let nam3 = nam.concat(nam2,nam4)
+    console.log(nam3)
+
+    // short() is use to alfabeticly short like first number 1,2,3,5 not all number sort
+    let abc = [12,11,5,2,8,45,1211,34,-18]
+    let compre = (a,b)=>{  // we can short all value sort like this
+        return a-b
+    }
+
+    abc.sort()
+    console.log(abc.sort(compre))
+    // reverse can all valuye print in reverse
+    abc.reverse()
+    console.log(abc)
+
+    // splice is use to remove some element and add element
+//    start+how many element remove +what shoud you add 
+    let aaaa = [12,13,13,13,1,4141,24,3,435,5,4,54]
+   let deletevalues =(aaaa.splice(3,5,12,12,12,12))  //    return values
+   console.log(deletevalues)
+   console.log(aaaa)
+
+
+//    slice
+     let bbbb =(aaaa.slice(3,5))
+     console.log(bbbb)
+     console.log(aaaa)
+    //  3 index is  included and 5 index is out
+     
+
+  
+
+
+
+    </script>
+    
+</body>
+</html>

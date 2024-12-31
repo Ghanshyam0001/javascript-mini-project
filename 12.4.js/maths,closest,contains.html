@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id1" class="box"><span id="sp1">i am span</span> is element1</div>
+    
+    <div id="id2" class="box">This is element2</div>
+    <script>
+        // most of the morden browser is return data search to id name but this is not good prectice
+        console.log(id1)
+        let id = document.getElementById("id1")
+        console.log(id)
+        console.log(id1.matches(".class"))
+        // IT's boolian type in id1 class name is not class so its return false
+        console.log(id1.matches(".box"))
+        console.log(sp1.closest(".box"))
+        console.log(sp1.closest("#sp1"))
+        console.log(id1.contains(sp1))
+        console.log(id1.contains(id1))
+        console.log(sp1.contains(id1))
+
+    </script>
+</body>
+</html>

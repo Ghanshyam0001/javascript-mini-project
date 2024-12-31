@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function oneplus(x,y){
+            console.log("Done")
+            return Math.round(1 +(x+y)/2)
+            // math.round use to round figer number prints,
+        }
+        const hello =()=>{
+            console.log("Hey I am Fine")
+            return "hi"
+        }
+        const sum  = (p,q)=>{
+             return p+q
+        }
+        let a = 12;
+        let b = 13;
+        let c = 14;
+        
+        console.log("Avarage sum of a and b is ",oneplus(a,b))
+        console.log("Avarage sum of c  and b is ",oneplus(c,b))
+        console.log("Avarage sum of a and c is ",oneplus(a,c))
+        console.log(sum(9,6))
+        hello();    // we can call function like this
+        let v = hello();
+        console.log(v)
+        // console.log(hello())
+
+    </script>
+</body>
+</html>

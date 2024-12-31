@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            console.log("promise is pending")
+           setTimeout(function(){
+            alert("hiii")
+            resolve(true)
+            // reject(new Error("something wrong"))
+           },4000)
+        })
+        console.log(p1)
+        let p2 = new Promise((resolve, reject) => {
+            console.log("promise is pending")
+           setTimeout(function(){
+            alert("hiii")
+            // resolve(true)
+            reject(new Error("something wrong"))
+           },4000)
+        })
+        console.log(p2)
+     p1.then((value) => {
+        console.log(value)
+        
+     })
+     p1.catch((error)=>{
+        console.log("something wrong")
+     })
+     p2.then((value) => {
+        console.log(value)
+        
+     })
+     p2.catch((error) => {
+        console.log("some error")
+     });
+    </script>
+    
+</body>
+</html>

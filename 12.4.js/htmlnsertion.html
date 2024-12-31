@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    i am start of container(outer)
+    <!-- before -->
+    <div class="container">
+        <!-- prepend -->
+        i am start of container(inner)
+        <div id="first">i am a first element</div>
+        i am end of cointainet(inner)
+        <!-- appendChild -->
+    </div>
+    <!-- after -->
+    i am end of container(outer)
+
+    <script>
+        let a = document.getElementsByTagName("div")[0]
+    //    a.innerHTML= a.innerHTML+"hello world"
+    let m=document.createElement('div');
+    m.innerHTML='hello worldd'
+    // a.appendChild(m)
+    // a.prepend(m)
+    // a.before(m)
+    // a.after(m)
+    // a.replaceWith(m)  [conteiner is out only inner html ]
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closures</title>
+</head>
+<body>
+    <script>
+        massage = "good globle"
+        function hello1(){
+            massage = "good morning"
+            console.log("Hello 1"+massage)
+            {
+                let massage = "Good Afternoon"
+                console.log("hello 1"+massage)
+            }
+            // let massage is only avlilble in curlly brecte
+            let c = function hello2(){
+                console.log("i am computer "+ massage)
+            }
+            return c 
+        
+        }
+        c = hello1()
+        c()
+
+
+        // MDN EXAMPLE
+        function init(){
+            var name = 'Mozilla'
+            function displayname(){
+                console.log(name);
+            }
+            name = "ghanshyam"
+            name = "patel"
+            // output is ghanshyam [the function and the lexical envirenment's references are also returned]
+           return displayname
+        }
+  
+       let c1=  init();
+       c1();
+
+
+
+       function returnfunc(){
+        const x = ()=>{
+            let a = 1;
+            console.log(a)
+            const y = ()=>{
+            // let a = 2;
+            console.log(a)
+             const z = ()=>{
+            // let a = 3;
+            console.log(a)
+
+
+
+                }
+                z()
+            }
+            a = 999
+            y()
+        }
+       return x
+    }
+   let a  =  returnfunc()
+   a();
+        // output ia 1,2,3 line by line print
+    </script>
+    
+</body>
+</html>

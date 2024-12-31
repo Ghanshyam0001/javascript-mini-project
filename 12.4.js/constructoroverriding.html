@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Employee{
+            constructor(name){
+                console.log(`${name}Employy constructor is here`)
+                 this.name= name
+                
+            }
+            login(){
+                console.log(`Employee is login`)
+            }
+            logout(){
+                console.log(`ployee is logout`)
+            }
+            requestleave(leaves){
+                console.log(`Employee is requested  ${leaves} leaves auto apporoved `)
+            }
+        }
+        // if there is no constructor is the child calss this is created autometically
+        class programmer extends Employee{
+            constructor(name){
+                super(name)
+                console.log(`${name}programmer constructor is here`)
+                // this.name= name
+                
+            }
+            // constructor(){
+            //     super(...arg)
+            // }
+            requestcoffee(x){
+                console.log(`employee has requested ${x}`)
+            }
+            requestleave(leaves){
+                super.requestleave(6)
+                console.log("one Extra ia granted")
+            }
+        }
+        let e =  new Employee()
+        let f = new programmer("ghanshyam")
+        e.login()
+        f.requestleave(3)
+        f.login()
+        f.requestcoffee(4)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    async function gk(){
+ let  delhiweather = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve("27 degree")
+    },2000)
+ })   
+ let  bangloreweather = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve("21 degree")
+    },4000)
+ })   
+//    delhiweather.then(alert)
+//    bangloreweather.then(alert)
+console.log("start")
+let delhiw = await delhiweather
+console.log("running"+delhiw)
+let bengw   = await bangloreweather
+console.log("just end"+bengw)
+return [delhiw,bengw]
+}
+const  kj =async()=>{
+  console.log("Hey i am kk and i am not waiting")
+}
+ const min = async()=>{
+    console.log("welcome to weather controlroom")
+let a = await gk()
+let b =await  kj()
+// console.log(a)
+// a.then((value)=>{ await na hoy toj chale beacuse its not a function
+//     console.log(value)
+// })
+
+ }
+ min()
+
+
+
+
+
+//   async function ghanshyam(){
+//         return 5
+//     }
+//     ghanshyam().then((x)=>{
+//         alert(x)
+//     })
+</script>
+</body>
+</html>

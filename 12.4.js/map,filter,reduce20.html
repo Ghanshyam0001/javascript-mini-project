@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // map its takes (value,index,array)
+    // map is use to make new array
+    let arr =  [12,2,443,66,33,55]
+    let a = arr.map((value,index,array)=>{
+        console.log(value,index,array)
+        return value +1
+    })
+    console.log(a)
+
+    // filter
+    // in use filter orignal array can't change  
+   let ab = arr.filter((value,index)=>{
+           return 50>value 
+   })
+   console.log(ab)
+   console.log(arr)
+
+//    reduce we can make function like variable in js
+const gk = (g1,g2)=>{
+    return g1+g2
+}
+let g3 = arr.reduce(gk)
+console.log(g3)
+
+
+    </script>
+    
+</body>
+</html>

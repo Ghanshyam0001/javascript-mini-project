@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getters and setters and intence of operator</title>
+</head>
+<body>
+    <script>
+        // getter
+        // class Animal{
+        //     constructor(givenname){
+        //         this.name =  givenname
+        //     }
+        //     fly(){
+        //         alert("   Me udd raha huu")
+
+        //     }
+        //     get app(){
+        //         return this.name
+        //     }
+        // }
+        //  let a  = new Animal("Bruno")
+        //  a.fly()
+        //  console.log(a.app)
+        //  setter
+        class Animal{
+            constructor(givenname){
+                this.name =  givenname
+            }
+            fly(){
+                console.log("   Me udd raha huu")
+
+            }
+            get app(){
+                return this.name
+            }
+              
+            set app(newicon){
+                this.name=newicon
+            }
+        }
+        class rabbit extends Animal{
+            eatcarrat(){
+                console.log("Me Carrot kha raha hu")
+
+            }
+         let a  = new rabbit("Bruno")
+         a.fly()
+         console.log(a.app)
+         a.app = "haskii"
+
+         console.log(a.app)
+         let c = "gug"
+
+         console.log(a instanceof Animal)
+         console.log(a instanceof rabbit)
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // two types of modules in javascript
+// ES 6 module
+import ghanshyam,{hello,ahello}  from "./modul2"
+hello()
+ahello("ghnshyam")
+ahello("rohan")
+ahello("hiren")
+ghanshyam()
+
+
+const hello=()=>{
+    console.log("hello ghanshyam")
+    }
+    const ahello = (name)=>{
+        console.log("hello "+name)
+    }
+    module.exports ={ hello,ahello};
+    
+
+    const {hello,ahello} = require("./modul1")
+hello()
+ahello("ghnshyam")
+ahello("rohan")
+ahello("hiren")
+// its simple module
+    
+</body>
+</html>

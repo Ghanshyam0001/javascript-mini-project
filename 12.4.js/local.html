@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local,globel and scope operator</title>
+</head>
+<body>
+    <script>
+      
+    //   let block-level scop
+    // var  globel scope
+    // p is globel scope
+    // ax is function scope
+    // function or p  is local scope
+// {
+//     let b = 45;
+// }
+// console.log(b)
+
+        {
+            var a = 2;
+      
+        }
+        console.log(a)
+
+        let p = 9;
+
+        function ax(){
+            console.log(p)
+            let a=8;
+            console.log(a)
+        }
+        console.log(a)
+        ax()
+    </script>
+    
+</body>
+</html>
